@@ -39,35 +39,252 @@
 
 	</group>
 
-	<group id="4" init="false" final="false" x="182.0" y="134.0">
-		<name>goBack</name>
+    <group id="4" init="false" final="false" x="182.0" y="134.0">
+		<name>wait</name>
 		<micro>
-			<name>return</name>
-			<instantiation> Movement</instantiation>
+			<name>wait</name>
+			<instantiation>Stopped</instantiation>
 		</micro>
 
 	</group>
 
+    <group id="5" init="false" final="false" x="182.0" y="134.0">
+        <name>displayMessage</name>
+        <micro>
+            <name>displayMessage</name>
+            <instantiation>Talking</instantiation>
+        </micro>
+
+    </group>
+
+    <group id="6" init="false" final="false" x="182.0" y="134.0">
+        <name>moveAway</name>
+        <micro>
+            <name>moveAway</name>
+            <instantiation>Movement</instantiation>
+        </micro>
+
+    </group>
+
+    <group id="7" init="false" final="false" x="182.0" y="134.0">
+        <name>charge</name>
+        <micro>
+            <name>charge</name>
+            <instantiation>Stopped</instantiation>
+        </micro>
+
+    </group>
 
 	<!--FROM HELLO STATE-->
-	<transition>
-		<source ref="2"/>
-		<target ref="4"/>
-		<guard condition="human_arrive"/>
+    <transition>
+		<source ref="0"/>
+		<target ref="1"/>
+		<guard condition="human_noInteractionLongTime"/>
 	</transition>
 
-	<transition>
+    <transition>
+		<source ref="0"/>
+		<target ref="6"/>
+		<guard condition="human_talkWithOther"/>
+	</transition>
+
+    <transition>
 		<source ref="0"/>
 		<target ref="3"/>
 		<guard condition="human_approach"/>
 	</transition>
 
-	<transition>
+    <transition>
+        <source ref="0"/>
+        <target ref="5"/>
+        <guard condition="human_otherPersonInterrupts"/>
+    </transition>
+
+    <transition>
+        <source ref="0"/>
+        <target ref="0"/>
+        <guard condition="human_noInteractionShortTime"/>
+    </transition>
+
+    <transition>
+        <source ref="0"/>
+        <target ref="0"/>
+        <guard condition="human_playerClose"/>
+    </transition>
+
+    <transition>
+        <source ref="0"/>
+        <target ref="0"/>
+        <guard condition="human_playerFar"/>
+    </transition>
+
+    <transition>
+		<source ref="1"/>
+		<target ref="0"/>
+		<guard condition="human_playerClose"/>
+	</transition>
+
+    <transition>
+        <source ref="1"/>
+        <target ref="1"/>
+        <guard condition="human_noInteractionShortTime"/>
+    </transition>
+
+    <transition>
+        <source ref="1"/>
+        <target ref="1"/>
+        <guard condition="human_noInteractionLongTime"/>
+    </transition>
+
+    <transition>
+        <source ref="1"/>
+        <target ref="1"/>
+        <guard condition="human_playerFar"/>
+    </transition>
+
+    <transition>
+        <source ref="2"/>
+        <target ref="5"/>
+        <guard condition="human_arrive"/>
+    </transition>
+
+    <transition>
+        <source ref="2"/>
+        <target ref="4"/>
+        <guard condition="human_playerFar"/>
+    </transition>
+
+    <transition>
+        <source ref="2"/>
+        <target ref="2"/>
+        <guard condition="human_playerClose"/>
+    </transition>
+
+    <transition>
+        <source ref="2"/>
+        <target ref="2"/>
+        <guard condition="human_noInteractionShortTime"/>
+    </transition>
+
+    <transition>
+        <source ref="2"/>
+        <target ref="2"/>
+        <guard condition="human_noInteractionLongTime"/>
+    </transition>
+
+    <transition>
+        <source ref="2"/>
+        <target ref="2"/>
+        <guard condition="human_approach"/>
+    </transition>
+
+    <transition>
+        <source ref="2"/>
+        <target ref="2"/>
+        <guard condition="human_leave"/>
+    </transition>
+
+    <transition>
 		<source ref="3"/>
 		<target ref="0"/>
 		<guard condition="human_leave"/>
 	</transition>
 
+    <transition>
+		<source ref="3"/>
+		<target ref="2"/>
+		<guard condition="human_finishConversation"/>
+	</transition>
+
+    <transition>
+		<source ref="3"/>
+		<target ref="5"/>
+		<guard condition="human_noNeedHelp"/>
+	</transition>
+
+    <transition>
+		<source ref="3"/>
+		<target ref="5"/>
+		<guard condition="human_noNeedHelp"/>
+	</transition>
+
+    <transition>
+        <source ref="3"/>
+        <target ref="3"/>
+        <guard condition="human_playerClose"/>
+    </transition>
+
+    <transition>
+        <source ref="3"/>
+        <target ref="3"/>
+        <guard condition="human_noInteractionShortTime"/>
+    </transition>
+
+    <transition>
+        <source ref="3"/>
+        <target ref="3"/>
+        <guard condition="human_noInteractionLongTime"/>
+    </transition>
+
+    <transition>
+        <source ref="4"/>
+        <target ref="2"/>
+        <guard condition="human_playerClose"/>
+    </transition>
+
+    <transition>
+        <source ref="4"/>
+        <target ref="4"/>
+        <guard condition="human_noInteractionShortTime"/>
+    </transition>
+
+    <transition>
+        <source ref="4"/>
+        <target ref="4"/>
+        <guard condition="human_playerFar"/>
+    </transition>
+
+    <transition>
+        <source ref="5"/>
+        <target ref="0"/>
+        <guard condition="human_noInteractionShortTime"/>
+    </transition>
+
+    <transition>
+        <source ref="5"/>
+        <target ref="0"/>
+        <guard condition="human_playerFar"/>
+    </transition>
+
+    <transition>
+        <source ref="5"/>
+        <target ref="0"/>
+        <guard condition="human_noInteractionShortTime"/>
+    </transition>
+
+    <transition>
+        <source ref="5"/>
+        <target ref="5"/>
+        <guard condition="human_playerClose"/>
+    </transition>
+
+    <transition>
+        <source ref="6"/>
+        <target ref="0"/>
+        <guard condition="human_noInteractionShortTime"/>
+    </transition>
+
+    <transition>
+        <source ref="6"/>
+        <target ref="0"/>
+        <guard condition="human_playerFar"/>
+    </transition>
+
+    <transition>
+        <source ref="6"/>
+        <target ref="6"/>
+        <guard condition="human_playerClose"/>
+    </transition>
 
 	<design>mturk</design>
 </nta>

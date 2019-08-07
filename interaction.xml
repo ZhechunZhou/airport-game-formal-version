@@ -96,7 +96,7 @@
 
     <transition>
         <source ref="0"/>
-        <target ref="5"/>
+        <target ref="0"/>
         <guard condition="human_otherPersonInterrupts"/>
     </transition>
 
@@ -143,6 +143,12 @@
     </transition>
 
     <transition>
+        <source ref="1"/>
+        <target ref="0"/>
+        <guard condition="human_otherPersonInterrupts"/>
+    </transition>
+
+    <transition>
         <source ref="2"/>
         <target ref="5"/>
         <guard condition="human_arrive"/>
@@ -182,6 +188,12 @@
         <source ref="2"/>
         <target ref="2"/>
         <guard condition="human_leave"/>
+    </transition>
+
+    <transition>
+        <source ref="2"/>
+        <target ref="0"/>
+        <guard condition="human_otherPersonInterrupts"/>
     </transition>
 
     <transition>
@@ -227,6 +239,12 @@
     </transition>
 
     <transition>
+        <source ref="3"/>
+        <target ref="3"/>
+        <guard condition="human_otherPersonInterrupts"/>
+    </transition>
+
+    <transition>
         <source ref="4"/>
         <target ref="2"/>
         <guard condition="human_playerClose"/>
@@ -242,6 +260,12 @@
         <source ref="4"/>
         <target ref="4"/>
         <guard condition="human_playerFar"/>
+    </transition>
+
+    <transition>
+        <source ref="4"/>
+        <target ref="4"/>
+        <guard condition="human_otherPersonInterrupts"/>
     </transition>
 
     <transition>
@@ -269,6 +293,12 @@
     </transition>
 
     <transition>
+        <source ref="5"/>
+        <target ref="5"/>
+        <guard condition="human_otherPersonInterrupts"/>
+    </transition>
+
+    <transition>
         <source ref="6"/>
         <target ref="0"/>
         <guard condition="human_noInteractionShortTime"/>
@@ -284,6 +314,12 @@
         <source ref="6"/>
         <target ref="6"/>
         <guard condition="human_playerClose"/>
+    </transition>
+
+    <transition>
+        <source ref="6"/>
+        <target ref="6"/>
+        <guard condition="human_otherPersonInterrupts"/>
     </transition>
 
 	<design>mturk</design>

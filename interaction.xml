@@ -295,7 +295,19 @@
     <transition>
         <source ref="5"/>
         <target ref="5"/>
+        <guard condition="human_leave"/>
+    </transition>
+
+    <transition>
+        <source ref="5"/>
+        <target ref="5"/>
         <guard condition="human_otherPersonInterrupts"/>
+    </transition>
+
+    <transition>
+        <source ref="5"/>
+        <target ref="5"/>
+        <guard condition="human_approach"/>
     </transition>
 
     <transition>

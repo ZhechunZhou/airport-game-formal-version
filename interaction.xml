@@ -106,6 +106,12 @@
         <guard condition="human_noInteractionShortTime"/>
     </transition>
 
+    transition>
+        <source ref="0"/>
+        <target ref="0"/>
+        <guard condition="human_leave"/>
+    </transition>
+
     <transition>
         <source ref="0"/>
         <target ref="0"/>
@@ -282,12 +288,6 @@
 
     <transition>
         <source ref="5"/>
-        <target ref="0"/>
-        <guard condition="human_noInteractionShortTime"/>
-    </transition>
-
-    <transition>
-        <source ref="5"/>
         <target ref="5"/>
         <guard condition="human_playerClose"/>
     </transition>
@@ -326,6 +326,12 @@
         <source ref="6"/>
         <target ref="6"/>
         <guard condition="human_playerClose"/>
+    </transition>
+
+    <transition>
+        <source ref="6"/>
+        <target ref="6"/>
+        <guard condition="human_talkWithOther"/>
     </transition>
 
     <transition>

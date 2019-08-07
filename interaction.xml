@@ -106,7 +106,7 @@
         <guard condition="human_noInteractionShortTime"/>
     </transition>
 
-    transition>
+    <transition>
         <source ref="0"/>
         <target ref="0"/>
         <guard condition="human_leave"/>

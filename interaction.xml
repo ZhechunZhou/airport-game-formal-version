@@ -175,6 +175,12 @@
     <transition>
         <source ref="2"/>
         <target ref="2"/>
+        <guard condition="human_talkWithOther"/>
+    </transition>
+
+    <transition>
+        <source ref="2"/>
+        <target ref="2"/>
         <guard condition="human_noInteractionShortTime"/>
     </transition>
 
@@ -338,6 +344,18 @@
         <source ref="6"/>
         <target ref="6"/>
         <guard condition="human_talkWithOther"/>
+    </transition>
+
+    <transition>
+        <source ref="6"/>
+        <target ref="6"/>
+        <guard condition="human_leave"/>
+    </transition>
+
+    <transition>
+        <source ref="6"/>
+        <target ref="6"/>
+        <guard condition="human_approach"/>
     </transition>
 
     <transition>

@@ -235,6 +235,12 @@
     <transition>
         <source ref="3"/>
         <target ref="3"/>
+        <guard condition="human_playerFar"/>
+    </transition>
+
+    <transition>
+        <source ref="3"/>
+        <target ref="3"/>
         <guard condition="human_noInteractionShortTime"/>
     </transition>
 

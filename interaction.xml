@@ -221,10 +221,10 @@
 	</transition>
 
     <transition>
-		<source ref="3"/>
-		<target ref="5"/>
-		<guard condition="human_noNeedHelp"/>
-	</transition>
+        <source ref="3"/>
+        <target ref="6"/>
+        <guard condition="human_talkWithOther"/>
+    </transition>
 
     <transition>
         <source ref="3"/>

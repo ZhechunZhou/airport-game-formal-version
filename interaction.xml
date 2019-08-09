@@ -270,6 +270,12 @@
 
     <transition>
         <source ref="4"/>
+        <target ref="2"/>
+        <guard condition="human_approach"/>
+    </transition>
+
+    <transition>
+        <source ref="4"/>
         <target ref="4"/>
         <guard condition="human_noInteractionShortTime"/>
     </transition>

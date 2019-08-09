@@ -204,7 +204,7 @@
 
     <transition>
         <source ref="2"/>
-        <target ref="0"/>
+        <target ref="4"/>
         <guard condition="human_otherPersonInterrupts"/>
     </transition>
 
